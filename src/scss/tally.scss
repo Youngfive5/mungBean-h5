@@ -1,0 +1,85 @@
+@import 'common.scss';
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+html, body {
+	@include whMax;
+	font-size: 14px;
+}
+
+.wrapper {
+	@include whMax;
+	@include box_flex;
+	@include direction(column);
+	background: #fff;
+	header {
+		@include wh(100%, 44px);
+		@include box_flex;
+		@include sizing;
+		@include align;
+		padding: 0 15px;
+		>span {
+			>i{
+				font-size: 25px;
+			}
+		}
+		>p{
+			margin-left: 20px;
+			font-size: 18px;
+			font-weight: 700;
+			color: #333;
+		}
+	}
+	
+	section {
+		flex: 1;
+		>div {
+			@include wh(100%, 60px);
+			@include box_flex;
+			line-height: 60px;
+			background: #E9EEF0;
+			> p.moneyInp {
+				@include wh(90%, 60px);
+				color: #333;
+				margin: 0 auto;
+				text-align: center;
+				font-size: 30px;
+			}
+		}
+	}
+	
+	footer {
+		@include wh(100%, 300px);
+		background: #E9EEF0;
+		>ul.keyboard {
+			@include whMax;
+			@include box_flex;
+			>li {
+				flex: 1;
+				@include box_flex;
+				@include direction(column);
+				// background: #007AFF;
+				border-right: 1px solid #fff;
+				>span,i {
+					flex: 1;
+					font-size: 25px;
+					border-top: 1px solid #fff;
+					text-align: center;
+					color: #333;
+					line-height: 2.8;
+				}
+				>i.sure {
+					background: #4CD964;
+					color: #fff;
+				}
+			}
+			>li:last-child {
+				border: none;
+			}
+		}
+	}
+}

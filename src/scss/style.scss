@@ -1,0 +1,134 @@
+@import 'common.scss';
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+html, body {
+	@include whMax;
+}
+
+.wrapper {
+	@include whMax;
+	@include box_flex;
+	@include direction(column);
+	font-size: 16px;
+	// 头部
+	>header {
+		@include wh(100%, 170px);
+		@include box_flex;
+		@include direction(column);
+		@include sizing;
+		padding: 10px 15px;
+		color: #fff;
+		background: #4CD964;
+		>h3 {
+			font-size: 18px;
+		}
+		>div.total-cont {
+			// @include wh(100%, 80px);
+			>p.total {
+				font-size: 55px;
+				color: #fff;
+				font-weight: 1200;
+				margin: 25px 0 5px 0;
+			}
+			>p:last-child {
+				font-size: 16px;
+				color: #fff;
+			}
+		}
+	}
+	
+	// 内容区
+	>section {
+		flex: 1;
+		background: #F3F4F5;
+		overflow: hidden;
+		>div.bill-cont { // width:100% 不设高
+			width: 100%;
+			>div.bills {
+				@include box_flex;
+				@include wh(100%, auto);
+				@include sizing;
+				@include align;
+				padding: 15px;
+				border-bottom: 1px solid #ccc;
+				background: #fff;
+				>p:first-child {
+					width: 50px;
+					>span {
+						font-size: 30px;
+						font-weight: 800;
+						color: gold;
+					}
+				}
+				>p:nth-child(2) {
+					flex: 1;
+					@include box_flex;
+					@include direction(column);
+					>span:first-child {
+						font-weight: 650;
+						font-size: 16px;
+						color: #333;
+					}
+					>span:last-child {
+						margin-top: 5px;
+						font-size: 13px;
+						color: #888;
+					}
+				}
+				>p:last-child {
+					font-size: 20px;
+					color: #333;
+				}
+			}
+		}
+		
+		>div.bill-two {
+			display: none;
+		}
+	}
+	
+	// 底部
+	>footer {
+		@include wh(100%, 50px);
+		background: #fff;
+		// overflow: hidden;
+		// 底部切换
+		>div.footer-tab {
+			position: relative;
+			@include wh(100%, 50px);
+			@include box_flex;
+			@include align;
+			@include justify(space-between);
+			> p{
+				flex: 1;
+				text-align: center;
+				// line-height: 50px;
+				font-size: 700;
+			}
+			>p.footer-tab-active {
+				color: #4CD964;
+			}
+			// 添加
+			>p.addBtn {
+				position: absolute;
+				top: -19px;
+				left: 50%;
+				@include wh(66px, 55px);
+				border-radius: 47%;
+				margin-left: -33px;
+				background: #fff;
+				// 添加按钮
+				>span {
+					font-size: 49px;
+					font-weight: 800;
+					color: #4CD964;;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../js/libs/mui.min.js"></script>
+		<link href="../css/mui.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../css/addBill.css">
+		<script src="../js/libs/require.js" data-main="../js/addBill.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<div class="head-top">
+					<span class="back" id="back">
+						<i class="mui-icon mui-icon-back"></i>
+					</span>
+					<p>添加账单</p>
+				</div>
+				<div class="head-btm">
+					<p class="moneyInp" id="moneyInp"></p>
+				</div>
+			</header>
+			<div class="hr-15"></div>
+			
+			<section>
+				<!-- 选择icon -->
+				<div class="selectIcon" id="selectIcon">
+					<dl class="dl-active">
+						<dt>
+							<span class="mui-icon mui-icon-email"></span>
+						</dt>
+						<dd>一般</dd>
+					</dl>
+					
+					<dl>
+						<dt>
+							<span class="mui-icon mui-icon-starhalf"></span>
+						</dt>
+						<dd>美食</dd>
+					</dl>
+					
+					<dl>
+						<dt>
+							<span class="mui-icon mui-icon-gear"></span>
+						</dt>
+						<dd>交通</dd>
+					</dl>
+					
+					<dl>
+						<dt>
+							<span class="mui-icon mui-icon-gear"></span>
+						</dt>
+						<dd>交通</dd>
+					</dl>
+					
+					<dl>
+						<dt>
+							<span class="mui-icon mui-icon-gear"></span>
+						</dt>
+						<dd>交通</dd>
+					</dl>
+				</div>
+				
+				<div class="hr-15"></div>
+				
+				<!-- 用户付款信息 -->
+				<div class="user-msg">
+					<!-- 付款参与人 -->
+					<div class="msg-top">
+						<p>参与</p>
+						<p><img src="../images/userImg.png" alt=""></p>
+					</div>
+					<!-- 付款方式 -->
+					<div class="msg-btm">
+						<p>
+							<span>付款</span>
+							<span><img src="../images/userImg.png" ></span>
+						</p>
+						<!-- 选择付款方式 -->
+						<p class="selectType" id="selectType">
+							<span>分账</span>
+							<span class="payment-active">平均</span>
+						</p>
+					</div>
+				</div>
+				
+				<div class="hr-15"></div>
+				
+				<!-- 备注信息 -->
+				<div class="remarks">
+					<p>备注</p>
+					<input type="text" class="remarksInp" placeholder="账单信息">
+				</div>
+			</section>
+		
+			<footer>
+				<div class="okBtn" id="okBtn">完成</div>
+			</footer>
+		</div>
+	</body>
+</html>

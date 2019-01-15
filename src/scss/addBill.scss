@@ -1,0 +1,176 @@
+@import 'common.scss';
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+html, body {
+	@include whMax;
+	font-size: 14px;
+}
+
+.wrapper {
+	@include whMax;
+	@include box_flex;
+	@include direction(column);
+	
+	header {
+		@include wh(100%, 100px);
+		@include box_flex;
+		@include direction(column);
+		@include sizing;
+		padding: 0 15px;
+		background: #fff;
+		>div.head-top {
+			@include wh(100%, 44px);
+			@include box_flex;
+			@include align;
+			>span {
+				>i{
+					font-size: 25px;
+				}
+			}
+			>p{
+				margin-left: 20px;
+				font-size: 18px;
+				font-weight: 700;
+				color: #333;
+			}
+		}
+		>div.head-btm {
+			@include wh(100%, 60px);
+			@include box_flex;
+			line-height: 60px;
+			> p.moneyInp {
+				@include wh(90%, 60px);
+				color: #4CD964;
+				font-weight: 800;
+				margin: 0 auto;
+				font-size: 30px;
+			}
+		}
+	}
+	
+	section {
+		flex: 1;
+		// 选择icon
+		.selectIcon {
+			@include wh(100%, 80px);
+			@include box_flex;
+			@include align;
+			@include justify('space-between');
+			background: #fff;
+			>dl {
+				flex: 1;
+				@include wh(20%, 65px);
+				@include box_flex;
+				@include direction(column);
+				@include align;
+				// background: pink;
+				>dt {
+					font-size: 25px;
+					color: #333;
+					font-weight: 800;
+				}
+			}
+			.dl-active {
+				>dt {
+					color: #4CD964;
+				}
+			}
+		}
+		// 用户付款信息
+		.user-msg {
+			@include wh(100%, 160px);
+			@include box_flex;
+			@include direction(column);
+			@include sizing;
+			padding: 0 15px;
+			background: #fff;
+			// 付款参与人
+			>.msg-top {
+				flex: 1;
+				@include box_flex;
+				@include align;
+				border-bottom: 1px solid #ccc;
+				> p:last-child {
+					margin-left: 15px;
+				}
+			}
+			// 付款方式
+			>.msg-btm {
+				flex: 1;
+				@include box_flex;
+				@include align;
+				// 付款
+				> p:first-child {
+					flex: 1;
+					@include box_flex;
+					@include align;
+					> span:last-child {
+						margin-left: 15px;
+					}
+				}
+				// 选择付款方式
+				> p:last-child {
+					flex: 1;
+					@include sizing;
+					padding-left: 10px;
+					border-left: 1px solid #ccc;
+					>span:last-child {
+						margin-left: 10px;
+					}
+					>span.payment-active {
+						color: #4CD964;
+					}
+				}
+			}
+		}
+		// 备注信息
+		.remarks {
+			@include wh(100%, 70px);
+			@include box_flex;
+			@include align;
+			@include sizing;
+			padding: 0 15px;
+			background: #fff;
+			> p{
+				@include wh(20px, auto);
+				font-size: 15px;
+				color: #333;
+			}
+			> .remarksInp {
+				flex:1;
+				margin: 2px 0 0 10px;
+				border: none;
+				outline: none;
+			}
+			>.remarksInp::-webkit-input-placeholder {
+				color: #ccc;
+			}
+		}
+		
+	}
+
+	footer {
+		@include wh(100%, 70px);
+		>div {
+			@include wh(80%, 55px);
+			margin: 5px auto;
+			border-radius: 10px;
+			background: #4CD964;
+			color: #fff;
+			line-height: 55px;
+			text-align: center;
+			font-size: 18px;
+		}
+	}
+	// 分割线
+	.hr-15{
+		@include wh(100%, 15px);
+		background: #F3F4F5;
+	}
+}
+
